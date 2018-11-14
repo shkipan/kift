@@ -1,11 +1,23 @@
 //
 // Created by Robert on 14.11.18.
 //
+#define MODELDIR "/Users/rkoval/CLionProjects/kiftv1/lib/PocketSphinx/share/pocketsphinx/model"
 
 #include <stdio.h>
+#include <pocketsphinx.h>
 
-int main() {
-	printf("Hello world!\n");
-	return (0);
+int
+main(int argc, char *argv[])
+{
+	ps_decoder_t *ps = NULL;
+	cmd_ln_t *config = NULL;
+
+	config = cmd_ln_init(NULL, ps_args(), TRUE,
+						 "-hmm", MODELDIR "/en-us/en-us",
+		"-lm", MODELDIR "/en-us/en-us.lm.bin",
+		"-dict", MODELDIR "/en-us/cmudict-en-us.dict",
+		NULL);
+	ps = ps_init(config);
+	return 0;
 }
 
