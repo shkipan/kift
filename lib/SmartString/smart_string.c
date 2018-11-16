@@ -2,7 +2,7 @@
 // Created by Robert on 15.11.18.
 //
 
-#include <smart_string.h>
+#include <lib/SmartString/smart_string.h>
 
 static size_t check_buff_size(sline_t *data, const char *str) {
 	unsigned int new_size;
