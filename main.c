@@ -37,10 +37,11 @@ main(int argc, char *argv[])
 //	system(code);
 
 int one = 1;
-	run_script(1, &one);
-	run_script(2, &one);
-	run_script(3, &one);
-	run_script(4, &one);
+	run_script(5, &one);
+//	run_script(1, &one);
+//	run_script(2, &one);
+//	run_script(3, &one);
+//	run_script(4, &one);
 
 	//pthread_join(pthread, NULL);
 	//printf("Hello!");

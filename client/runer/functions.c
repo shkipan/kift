@@ -43,3 +43,12 @@ void *open_weather() {
 	system(code);
 	pthread_exit(0);
 }
+
+
+/* If you don't have music in iTunes - it's your problem:) */
+void *play_music() {
+	printf("azaz");
+	char *code = {"osascript -e 'tell application \"iTunes\" to play'"};
+	system(code);
+	pthread_exit(0);
+}

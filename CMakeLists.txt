@@ -22,7 +22,7 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/lib/PocketSphinx/include/pocketsphinx/
         ${PROJECT_SOURCE_DIR}/lib/PocketSphinx/lib/)
 
-add_executable(kift main.c webserver/server.c client/runer/runer.c
+add_executable(kift main.c client/runer/runer.c
         client/runer/functions.c)
 
 
