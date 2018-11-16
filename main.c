@@ -7,7 +7,7 @@
 #include <pocketsphinx.h>
 #include <smart_string.c>
 #include <stdbool.h>
-#include <webserver/server.h>
+#include <webInterface/server.h>
 
 
 #include <client/includes/client.h>
@@ -36,7 +36,7 @@ main(int argc, char *argv[])
 //	char *code = sstring("%s %s", sam,text);
 //	system(code);
 
-int one = 0;
+int one = 1;
 	run_script(1, &one);
 	run_script(2, &one);
 	run_script(3, &one);
