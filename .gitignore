@@ -6,3 +6,4 @@ sphinx_src/sphinxbase/build
 sphinx_src/sphinxbase/build/*
 sphinx_src/pocketsphinx/build
 sphinx_src/pocketsphinx/build/*
+lib/Sphinx/*
