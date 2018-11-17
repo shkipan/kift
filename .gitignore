@@ -2,3 +2,5 @@
 .idea/*
 .DS_Store
 cmake-build-debug/
+sphinx_src/sphinxbase/build/*
+sphinx_src/pocketsphinx/build/*

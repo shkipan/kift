@@ -1,7 +1,7 @@
 //
 // Created by Robert on 14.11.18.
 //
-#define MODELDIR "/Users/rkoval/CLionProjects/kiftv1/lib/PocketSphinx/share/pocketsphinx/model"
+#define MODELDIR "/Users/rkoval/CLionProjects/kiftv1/lib/Sphinx/share/pocketsphinx/model"
 
 #include <stdio.h>
 #include <pocketsphinx.h>
