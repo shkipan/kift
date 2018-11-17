@@ -5,7 +5,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
 include_directories(
         ${PROJECT_SOURCE_DIR}/
-        ${PROJECT_SOURCE_DIR}/webserver/
+        ${PROJECT_SOURCE_DIR}/webInterface/
         ${PROJECT_SOURCE_DIR}/libft/
         ${PROJECT_SOURCE_DIR}/libft/includes/
         ${PROJECT_SOURCE_DIR}/lib/
@@ -23,7 +23,8 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/lib/PocketSphinx/lib/)
 
 add_executable(kift main.c client/runer/runer.c
-        client/runer/functions.c)
+        client/runer/functions.c
+        webInterface/server.c)
 
 
 target_link_libraries(kift

@@ -45,7 +45,8 @@ int one = 1;
 
 	//pthread_join(pthread, NULL);
 	//printf("Hello!");
-	//init_server_info();
+	//
+	init_server_info();
 	return 0;
 }
 
