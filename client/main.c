@@ -36,9 +36,11 @@ main(int argc, char *argv[])
 //	char *code = sstring("%s %s", sam,text);
 //	system(code);
 
-unsigned int one = 1;
+ int one = 1;
 
-	run_script(7, (void*)1);
+	run_script(14, (void*)one);
+	char *m = "Mail";
+	run_script(15, (void*)m);
 
 
 	//pthread_join(pthread, NULL);
