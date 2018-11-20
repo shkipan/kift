@@ -7,6 +7,8 @@ CONFIG_PATH="PKG_CONFIG_PATH=$(BASE_PATH)/lib/pkgconfig"
 #
 all:
 	echo $(BASE_PATH)
+	@mkdir -p $(BASE)/build
+	@mkdir -p $(POCKET)/build
 	cd $(BASE)/build && pwd && ../configure --prefix=$(BASE_PATH) && make check && make && make install
 	export $(CONFIG_PATH) && cd $(POCKET)/build && pwd && ../configure --prefix=$(BASE_PATH) && make check && make && make install
 

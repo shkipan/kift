@@ -1,0 +1,5 @@
+#make server
+
+
+all:
+	gcc
