@@ -28,7 +28,8 @@ void *change_volume(void *data);
 void *web_search(void *data);
 void *show_traffic();
 void *open_weather(); // show_weather ?
-void *myip();
+void *my_ip();
+void *my_location();
 
 /* Tools */
 void *make_screenshot(void *data);
@@ -36,4 +37,6 @@ void *close_all_finder_windows();
 void *set_brightness(void *data); // change_br
 void *lock_screen();
 void *open_app(void *data);
+
+void *get_hostname(); /// ???
 #endif

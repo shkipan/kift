@@ -66,7 +66,10 @@ void run_script(int number, void *data) {
 		case 15: pthread_create(&pthread, &pthread_attr, open_app, data);
 			usleep(TIMER);
 			break;
-		case 16: pthread_create(&pthread, &pthread_attr, myip, NULL);
+		case 16: pthread_create(&pthread, &pthread_attr, my_ip, NULL);
+			usleep(TIMER);
+			break;
+		case 17: pthread_create(&pthread, &pthread_attr, my_location(), NULL);
 			usleep(TIMER);
 			break;
 		default:break;

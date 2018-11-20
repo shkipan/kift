@@ -162,9 +162,30 @@ void *open_app(void *data) {
 	pthread_exit(0);
 }
 
-void *myip() {
+void *my_ip() {
 	const char *code =
 				   "osascript -e 'open location \"https://2ip.ua/ua/\"'";
 	system(code);
 	pthread_exit(0);
 }
+
+void *my_location() {
+	const char *code =
+				   "osascript -e 'open location \"https://www.google.com/maps/\"'";
+	system(code);
+	pthread_exit(0);
+}
+
+//TODO
+/*
+ * Get Log of executed commands; - client only
+ *
+ * */
+//and what ??? how to return this ??
+void *get_hostname() {
+	size_t len = 30;
+	char hostname[len];
+
+	gethostname(hostname, len);
+}
+
