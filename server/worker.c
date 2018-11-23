@@ -2,6 +2,7 @@
 // Created by Robert on 22.11.18.
 //
 #include <server.h>
+#include <poll.h>
 
 cmd_rec_t commands[22] = {
 	{0,0,0,0,0,0},
@@ -28,31 +29,29 @@ cmd_rec_t commands[22] = {
 	{0,0,0,0,0,0}
 };
 
+
 void *worker(void *socket) {
 	char activator[32];
 	while (1)
 	{
-		recv((int)socket, activator, 32, 0);
+		if (recv((int)socket, activator, sizeof(activator), MSG_PEEK | MSG_DONTWAIT) == 0) {
+			break;
+		}
+		ssize_t r_st = recv((int)socket, activator, 32, 0);
+		if (r_st == -1)
+		{
+			break;
+		}
 		if (strcmp(activator, "I AM HERE") == 0)
 		{
 			send((int)socket, "OK", 2, 0);
 			memset(activator, 0, 32);
 
-
-
-
-
-
 		} else if (strcmp(activator, "GOOD BYE") == 0)
 			break;
 
 	}
-	write(1, "CLIENT DISCONNECT\n", 18);
+	write(1, "CLIENT DISCONNECTED\n", 20);
 	shutdown((int)socket, 2);
 	pthread_exit(0);
-
-
-//	char * a = close_all_finder_windows();
-//	send((int)socket, a, strlen(a), 0);
-//	printf("%s\n",a);
 }
