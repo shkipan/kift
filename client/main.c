@@ -1,16 +1,11 @@
 //
 // Created by Robert on 14.11.18.
 //
-#define MODELDIR "../lib/Sphinx/share/pocketsphinx/model"
-
-#include <stdio.h>
-#include <pocketsphinx.h>
-#include <smart_string.c>
-#include <stdbool.h>
-#include <server/server.h>
 
 
-#include <client/client.h>
+
+
+#include <client.h>
 
 /* to pthread */
 
@@ -19,6 +14,10 @@
 int
 main(int argc, char *argv[])
 {
+
+
+
+	connect_as();
 //	ps_decoder_t *ps = NULL;
 //	cmd_ln_t *config = NULL;
 //
@@ -36,11 +35,11 @@ main(int argc, char *argv[])
 //	char *code = sstring("%s %s", sam,text);
 //	system(code);
 
- int one = 1;
-
-	run_script(14, (void*)one);
-	char *m = "Mail";
-	run_script(15, (void*)m);
+// int one = 1;
+//
+//	run_script(14, (void*)one);
+//	char *m = "Mail";
+//	run_script(15, (void*)m);
 
 
 	//pthread_join(pthread, NULL);

@@ -21,11 +21,16 @@ include_directories(
 )
 
 
-add_executable(server server/main.c server/server.c server/server.h)
+add_executable(server
+        server/main.c
+        server/server.c
+        server/server.h
+        server/worker.c
+        server/functions.c
+        lib/SmartString/smart_string.c)
 
-add_executable(client client/main.c
-        client/runer/runer.c
-        client/runer/functions.c
+add_executable(client
+        client/main.c
         client/client.c)
 
 target_link_libraries(server
