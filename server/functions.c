@@ -60,10 +60,10 @@ void *set_brightness(void *data) {
 	/* 1 - max, 0 - min */
 	int key_code = 0;
 	if ((int)data == 1) {
-		key_code = 113;
+		key_code = 144;
 	}
 	else {
-		key_code = 107;
+		key_code = 145;
 	}
 	char *code = sstring("osascript -e 'tell application \"System Events\"\n"
 						 "    repeat 16 times\n"
